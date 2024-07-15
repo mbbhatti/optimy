@@ -1,0 +1,142 @@
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+#app {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensure app takes at least the full viewport height */
+}
+
+main {
+    flex-grow: 1; /* This allows main content to grow and push footer to bottom */
+}
+
+.logo {
+    height: 50px;
+}
+
+.nav-link {
+    margin-left: 1rem;
+}
+
+@media (max-width: 767.98px) {
+    .nav-link {
+        margin-left: 0;
+        margin-bottom: 0.5rem;
+    }
+
+    .navbar-brand {
+        margin-bottom: 0.5rem;
+    }
+
+    .btn {
+        margin-top: 0.5rem;
+    }
+}
+
+.list-group-item.active {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+.footer a {
+    margin-right: 1rem;
+}
+
+.carousel-image-container {
+    position: relative;
+    overflow: hidden;
+    height: 40vh; /* Adjust the height as needed */
+}
+
+.carousel-image-container img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.carousel-item {
+    position: relative;
+}
+
+.carousel-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background for readability */
+    color: #fff; /* Text color */
+    padding: 15px;
+}
+
+.carousel-caption h5,
+.carousel-caption p {
+    margin-bottom: 0; /* Remove default margin */
+}
+
+
+/* Grid View */
+.view-mode#grid-view .row {
+    margin-left: -15px;
+    margin-right: -15px;
+}
+
+.view-mode#grid-view .col-md-4 {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-bottom: 30px;
+}
+
+/* List View */
+.view-mode#list-view .list-group-item {
+    margin-bottom: 20px;
+}
+
+.view-mode#list-view .list-group-item .list-group-item-action {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.view-mode#list-view .list-group-item .list-group-item-action img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.view-mode#list-view .list-group-item .list-group-item-action .item-details {
+    flex: 1;
+}
+
+.view-mode#list-view .list-group-item .list-group-item-action .item-details h5 {
+    margin-bottom: 0.5rem;
+}
+
+.view-mode#list-view .list-group-item .list-group-item-action .item-details .progress {
+    margin-bottom: 0.5rem;
+}
+
+.view-mode#list-view .list-group-item .list-group-item-action .item-details .progress-bar {
+    border-radius: 4px;
+}
+
+.view-mode#list-view .list-group-item .list-group-item-action .item-details .btn-primary {
+    margin-top: 0.5rem;
+}
+
+.progress-wrapper {
+    display: flex;
+}
+
+.progress-wrapper progress {
+    height: 27px;
+}
